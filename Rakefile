@@ -148,8 +148,8 @@ vim_plugin_task "unimpaired",       "git://github.com/tpope/vim-unimpaired.git"
 vim_plugin_task "searchfold",       "git://github.com/vim-scripts/searchfold.vim.git"
 vim_plugin_task "irblack",          "git://github.com/wgibbs/vim-irblack.git"
 vim_plugin_task "zencoding",        "http://www.vim.org/scripts/download_script.php?src_id=14347"
-vim_plugin_task "pathogen",         "git://github.com/tpope/vim-pathogen.git"
 vim_plugin_task "bufexplorer",      "http://www.vim.org/scripts/download_script.php?src_id=14208"
+vim_plugin_task "coffee-script",    "git://github.com/kchmck/vim-coffee-script.git"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
@@ -191,12 +191,20 @@ vim_plugin_task "janus_themes" do
   end
 end
 
+vim_plugin_task "vilight" do
+  sh "curl http://www.vim.org/scripts/download_script.php?src_id=14098 > colors/vilight.vim"
+end
+
 vim_plugin_task "molokai" do
   sh "curl http://www.vim.org/scripts/download_script.php?src_id=9750 > colors/molokai.vim"
 end
 
 vim_plugin_task "mustasche" do
   sh "curl http://github.com/defunkt/mustache/raw/master/contrib/mustache.vim > syntax/mustache.vim"
+end
+
+vim_plugin_task "local" do
+  sh "cp -r local/* ."
 end
 
 desc "Update the documentation"
