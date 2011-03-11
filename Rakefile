@@ -226,7 +226,7 @@ vim_plugin_task "vwilight" do
 end
 
 vim_plugin_task "django-syntax" do
-  sh "curl http://www.vim.org/scripts/download_script.php?src_id=13026 > syntax/django.vim"
+  sh "curl http://www.vim.org/scripts/download_script.php?src_id=13026 | tail -n 81 | head -n 80 > after/syntax/html.vim"
 end
 
 vim_plugin_task "local" do
