@@ -225,6 +225,10 @@ vim_plugin_task "vwilight" do
   sh "curl https://gist.github.com/raw/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim > colors/vwilight.vim"
 end
 
+vim_plugin_task "django-syntax" do
+  sh "curl http://www.vim.org/scripts/download_script.php?src_id=13026 > syntax/django.vim"
+end
+
 vim_plugin_task "local" do
   sh "cp -r local/* ."
 end
