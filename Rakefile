@@ -225,12 +225,13 @@ vim_plugin_task "vwilight" do
   sh "curl https://gist.github.com/raw/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim > colors/vwilight.vim"
 end
 
-vim_plugin_task "django-syntax" do
-  sh "curl http://www.vim.org/scripts/download_script.php?src_id=13026 | tail -n 81 | head -n 80 > after/syntax/html.vim"
-end
-
 vim_plugin_task "local" do
   sh "cp -r local/* ."
+end
+
+if File.exists?(janus = File.expand_path("~/.janus.rake"))
+  puts "Loading your custom rake file"
+  import(janus)
 end
 
 desc "Update the documentation"
