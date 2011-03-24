@@ -150,13 +150,6 @@ vim_plugin_task "endwise",          "git://github.com/tpope/vim-endwise.git"
 vim_plugin_task "irblack",          "git://github.com/wgibbs/vim-irblack.git"
 vim_plugin_task "vim-coffee-script","git://github.com/kchmck/vim-coffee-script.git"
 vim_plugin_task "syntastic",        "git://github.com/scrooloose/syntastic.git"
-vim_plugin_task "zencoding",        "http://www.vim.org/scripts/download_script.php?src_id=14347"
-vim_plugin_task "bufexplorer",      "http://www.vim.org/scripts/download_script.php?src_id=14208"
-vim_plugin_task "ingretu",          "git://github.com/gmarik/ingretu.git"
-vim_plugin_task "xdebug",           "http://www.vim.org/scripts/download_script.php?src_id=7285"
-vim_plugin_task "extradite",        "git://github.com/int3/vim-extradite.git"
-vim_plugin_task "gundo",            "git://github.com/sjl/gundo.vim.git"
-vim_plugin_task "html5",            "git://github.com/othree/html5-syntax.vim.git"
 vim_plugin_task "puppet",           "git://github.com/ajf/puppet-vim.git"
 vim_plugin_task "scala",            "git://github.com/bdd/vim-scala.git"
 vim_plugin_task "gist-vim",         "git://github.com/mattn/gist-vim.git"
@@ -203,10 +196,6 @@ vim_plugin_task "janus_themes" do
   end
 end
 
-vim_plugin_task "vilight" do
-  sh "curl http://www.vim.org/scripts/download_script.php?src_id=14098 > colors/vilight.vim"
-end
-
 vim_plugin_task "molokai" do
   sh "curl https://github.com/mrtazz/molokai.vim/raw/master/colors/molokai.vim > colors/molokai.vim"
 end
@@ -223,10 +212,6 @@ vim_plugin_task "arduino","git://github.com/vim-scripts/Arduino-syntax-file.git"
 end
 vim_plugin_task "vwilight" do
   sh "curl https://gist.github.com/raw/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim > colors/vwilight.vim"
-end
-
-vim_plugin_task "local" do
-  sh "cp -r local/* ."
 end
 
 if File.exists?(janus = File.expand_path("~/.janus.rake"))
@@ -266,4 +251,3 @@ task :default => [
 
 desc "Clear out all build artifacts and rebuild the latest Janus"
 task :upgrade => [:clean, :pull, :default]
-
