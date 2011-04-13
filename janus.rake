@@ -8,6 +8,7 @@ vim_plugin_task "html5",            "git://github.com/othree/html5-syntax.vim.gi
 vim_plugin_task "easymotion",       "git://github.com/Lokaltog/vim-easymotion.git"
 vim_plugin_task "indentguide",      "git://github.com/nathanaelkane/vim-indent-guides.git"
 vim_plugin_task "matchit",          "http://www.vim.org/scripts/download_script.php?src_id=8196"
+vim_plugin_task "scss",             "git://github.com/cakebaker/scss-syntax.vim.git"
 
 vim_plugin_task "vilight" do
   sh "curl http://www.vim.org/scripts/download_script.php?src_id=14098 > colors/vilight.vim"
