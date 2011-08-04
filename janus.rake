@@ -10,6 +10,7 @@ vim_plugin_task "indentguide",      "git://github.com/nathanaelkane/vim-indent-g
 vim_plugin_task "matchit",          "http://www.vim.org/scripts/download_script.php?src_id=8196"
 vim_plugin_task "scss",             "git://github.com/cakebaker/scss-syntax.vim.git"
 vim_plugin_task "gitv",             "git://github.com/gregsexton/gitv.git"
+vim_plugin_task "tagbar",           "git://github.com/majutsushi/tagbar.git"
 
 vim_plugin_task "vilight" do
   sh "curl http://www.vim.org/scripts/download_script.php?src_id=14098 > colors/vilight.vim"
