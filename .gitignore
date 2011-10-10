@@ -16,3 +16,4 @@ nerdtree_plugin
 /indent
 .VimballRecord
 /bundle
+/backup
