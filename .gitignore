@@ -17,3 +17,4 @@ nerdtree_plugin
 .VimballRecord
 /bundle
 /backup
+/compiler
